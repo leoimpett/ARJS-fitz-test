@@ -14,14 +14,23 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
+    
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
+        <a-assets>
+        <img id="print" src="https://cdn.glitch.global/54d875cd-fa2f-434c-a14e-dd4b2b3e5573/fitz_print.jpeg?v=1646222856681">
+        </a-assets>
+        
         <a-camera gps-camera rotation-reader></a-camera>
         
-        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 1.275840; latitude: 52.637830;" animation-mixer/>
+<!--        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 1.275840; latitude: 52.637830;" animation-mixer/>-->
+        
+<!--        <a-plane src="#print" height="2" width="2.5"  position="0 0 .1" gps-entity-place="longitude: 1.275840; latitude: 52.637830;"></a-plane>-->
+        
+        <a-plane src="#print" material="transparent: true; opacity: 0.9" height="200" width="300"  position="0 0 -500" gps-entity-place="longitude: 1.275840; latitude: 52.637830;"></a-plane>
         
         
 	</a-scene>
